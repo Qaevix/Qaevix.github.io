@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#09070d">
-  <meta name="description" content="l1nux — Dark Web OSINT and cyber security portfolio.">
-  <meta property="og:title" content="l1nux — Dark Web OSINT">
-  <meta property="og:description" content="Cyber Security, OSINT, IR & DFIR, IAM and DevOps.">
+  <meta name="theme-color" content="#090303">
+  <meta name="description" content="Qaevix — Dark Web OSINT, cyber security, TryHackMe and Hack The Box portfolio.">
+  <meta property="og:title" content="Qaevix — Dark Web OSINT">
+  <meta property="og:description" content="Cyber Security, OSINT, TryHackMe, Hack The Box, IR & DFIR, IAM and DevOps.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/profile.gif">
-  <title>l1nux — Dark Web OSINT</title>
+  <title>Qaevix — Dark Web OSINT</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="qaevix.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -27,12 +28,57 @@
   <canvas id="particle-canvas" aria-hidden="true"></canvas>
   <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
+  <button class="writeup-drawer-toggle" id="writeup-drawer-toggle" type="button" aria-controls="writeup-drawer" aria-expanded="false">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 4.5h10.5A3.5 3.5 0 0 1 19 8v11.5H8.5A3.5 3.5 0 0 1 5 16V4.5Zm0 11.5a3.5 3.5 0 0 1 3.5-3.5H19"/></svg>
+    <span>WRITE-UPS</span>
+  </button>
+
+  <aside class="writeup-drawer" id="writeup-drawer" aria-hidden="true">
+    <button class="writeup-drawer__backdrop" type="button" data-drawer-close aria-label="Close write-ups drawer"></button>
+    <div class="writeup-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="writeup-drawer-title">
+      <header class="writeup-drawer__header">
+        <div>
+          <span class="section-kicker">FIELD NOTES</span>
+          <h2 id="writeup-drawer-title">Write-ups Library</h2>
+        </div>
+        <button class="writeup-drawer__close" type="button" data-drawer-close aria-label="Close write-ups drawer">×</button>
+      </header>
+      <p class="writeup-drawer__intro">Labs, investigations, and engineering notes — organized by track.</p>
+
+      <nav class="writeup-nav" aria-label="Write-up categories">
+        <section class="writeup-category is-open" data-writeup-category="tryhackme">
+          <button type="button" aria-expanded="true">
+            <span><i class="writeup-dot writeup-dot--thm"></i>TryHackMe</span><b>+</b>
+          </button>
+          <div class="writeup-category__items" data-writeup-list="tryhackme"></div>
+        </section>
+        <section class="writeup-category" data-writeup-category="hackthebox">
+          <button type="button" aria-expanded="false">
+            <span><i class="writeup-dot writeup-dot--htb"></i>Hack The Box</span><b>+</b>
+          </button>
+          <div class="writeup-category__items" data-writeup-list="hackthebox"></div>
+        </section>
+        <section class="writeup-category" data-writeup-category="computer-science">
+          <button type="button" aria-expanded="false">
+            <span><i class="writeup-dot writeup-dot--cs"></i>Computer Science</span><b>+</b>
+          </button>
+          <div class="writeup-category__items" data-writeup-list="computer-science"></div>
+        </section>
+      </nav>
+
+      <div class="writeup-drawer__hint">
+        <span>LOCAL LIBRARY</span>
+        <p>New entries can be published from <code>data/writeups.json</code> without redesigning this panel.</p>
+      </div>
+    </div>
+  </aside>
+
   <main id="main-content">
     <section class="hero" id="top" aria-labelledby="profile-name">
       <header class="topbar">
         <a class="brand" href="#top" aria-label="Back to top">
-          <span class="brand__mark">L</span>
-          <span>l1nux</span>
+          <span class="brand__mark">Q</span>
+          <span>Qaevix</span>
         </a>
         <button class="terminal-launch" id="terminal-launch" type="button" aria-haspopup="dialog">
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 7 5 5-5 5M12 17h7"/></svg>
@@ -45,13 +91,19 @@
         <div class="profile-visual">
           <div class="profile-visual__glow" aria-hidden="true"></div>
           <div class="profile-visual__ring">
-            <img src="assets/profile.gif" alt="Animated profile image of l1nux" width="150" height="150">
+            <img src="assets/profile.gif" alt="Animated profile image of Qaevix" width="150" height="150">
           </div>
           <span class="profile-visual__status" title="Always learning"><span></span>online</span>
         </div>
 
         <div class="profile-copy">
-          <h1 id="profile-name">Qaevix</h1>
+          <h1 id="profile-name" class="qaevix-wordmark">
+            <span class="qaevix-wordmark__video" aria-hidden="true">
+              <iframe src="https://www.youtube-nocookie.com/embed/tGsKzZtRwxw?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=tGsKzZtRwxw&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="" tabindex="-1" loading="eager" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </span>
+            <span class="qaevix-wordmark__outline" aria-hidden="true">Qaevix</span>
+            <span class="sr-only">Qaevix</span>
+          </h1>
           <p class="hero__role">Dark Web <span>OSINT</span></p>
           <p class="hero__intro">Exploring hidden signals, investigating digital footprints, and turning complex security data into clear intelligence.</p>
 
@@ -82,36 +134,69 @@
           <span class="section-kicker">01 / profile</span>
           <h2 id="connect-title">Connect &amp; explore</h2>
         </div>
-        <p>Profiles, research notes, and current progress.</p>
+        <p>Profiles, research notes, current progress, and field write-ups.</p>
       </div>
 
-      <div class="cards">
-        <a class="card card--tryhackme reveal" href="https://tryhackme.com/p/Qaevix" target="_blank" rel="noopener noreferrer">
-          <div class="card__topline">
-            <span class="platform-icon platform-icon--thm" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M6.5 4.5h11v4.2h-3.1V20H9.6V8.7H6.5V4.5Z"/></svg>
-            </span>
-            <span class="card__title"><strong>TryHackMe</strong><small>Live security profile</small></span>
-            <span class="external-arrow" aria-hidden="true">↗</span>
-          </div>
-          <div class="rank-display">
-            <div class="rank-display__meta">
-              <span class="rank-display__label">WORLD RANK</span>
-              <span class="rank-display__percent" id="rank-percentile">TOP 0.0012%</span>
+      <div class="cards cards--platforms">
+        <div class="rank-cards">
+          <a class="card card--tryhackme rank-card reveal" href="https://tryhackme.com/p/Qaevix" target="_blank" rel="noopener noreferrer">
+            <div class="card__topline">
+              <span class="platform-icon platform-icon--thm" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6.5 4.5h11v4.2h-3.1V20H9.6V8.7H6.5V4.5Z"/></svg>
+              </span>
+              <span class="card__title"><strong>TryHackMe</strong><small>Live security profile</small></span>
+              <span class="external-arrow" aria-hidden="true">↗</span>
             </div>
-            <strong>#<span id="rank-value">97</span></strong>
-          </div>
-          <div class="stats-grid" aria-label="TryHackMe statistics">
-            <span><strong id="rooms-value">1,197</strong><small>ROOMS</small></span>
-            <span><strong id="badges-value">97</strong><small>BADGES</small></span>
-            <span><strong><span id="streak-value">61</span><em>d</em></strong><small>STREAK</small></span>
-            <span><strong id="points-value">160,306</strong><small>POINTS</small></span>
-          </div>
-          <span class="sync-state" id="sync-state"><i></i> Auto-sync enabled</span>
-        </a>
+            <div class="rank-display">
+              <div class="rank-display__meta">
+                <span class="rank-display__label">WORLD RANK</span>
+                <span class="rank-display__percent" id="rank-percentile">TOP 0.0010%</span>
+              </div>
+              <strong>#<span id="rank-value">79</span></strong>
+            </div>
+            <div class="stats-grid" aria-label="TryHackMe statistics">
+              <span><strong id="rooms-value">1,212</strong><small>ROOMS</small></span>
+              <span><strong id="badges-value">97</strong><small>BADGES</small></span>
+              <span><strong><span id="streak-value">67</span><em>d</em></strong><small>STREAK</small></span>
+              <span><strong id="points-value">162,797</strong><small>POINTS</small></span>
+            </div>
+            <span class="sync-state" id="sync-state"><i></i> Daily repository sync</span>
+          </a>
 
-        <div class="side-cards">
-          <a class="card card--link reveal" href="https://github.com/Qaevix" target="_blank" rel="noopener noreferrer">
+          <a class="card card--htb rank-card reveal" href="https://app.hackthebox.com/users/3863070?profile-top-tab=machines&amp;ownership-period=1M&amp;profile-bottom-tab=prolabs" target="_blank" rel="noopener noreferrer">
+            <div class="card__topline">
+              <span class="platform-icon platform-icon--htb" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m12 3 7.8 4.5v9L12 21l-7.8-4.5v-9L12 3Z"/><path d="m8 9.2 4 2.3 4-2.3M12 11.5V16"/></svg>
+              </span>
+              <span class="card__title"><strong>Hack The Box</strong><small>Offensive security profile</small></span>
+              <span class="external-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="rank-display rank-display--htb">
+              <div class="rank-display__meta">
+                <span class="rank-display__label">LEVEL</span>
+                <span class="rank-display__percent htb-rank">BEGINNER</span>
+              </div>
+              <strong><span class="htb-level-prefix">LVL</span> 7</strong>
+            </div>
+            <div class="stats-grid stats-grid--htb" aria-label="Hack The Box statistics">
+              <span><strong>1/548</strong><small>MACHINES</small></span>
+              <span><strong>0/181</strong><small>SHERLOCKS</small></span>
+              <span><strong>0/850</strong><small>CHALLENGES</small></span>
+            </div>
+            <span class="sync-state sync-state--htb"><i></i> Hack The Box journey started</span>
+          </a>
+        </div>
+
+        <div class="social-grid" aria-label="Social and write-up links">
+          <a class="card card--link social-card reveal" href="https://github.com/Qaevix/TryHackMe" target="_blank" rel="noopener noreferrer">
+            <span class="platform-icon platform-icon--notes" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 4.5h10.5A3.5 3.5 0 0 1 19 8v11.5H8.5A3.5 3.5 0 0 1 5 16V4.5Zm0 11.5a3.5 3.5 0 0 1 3.5-3.5H19"/></svg>
+            </span>
+            <span class="card__title"><strong>THM Write-ups</strong><small>GitHub collection</small></span>
+            <span class="external-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="card card--link social-card reveal" href="https://github.com/Qaevix" target="_blank" rel="noopener noreferrer">
             <span class="platform-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.1-4.7-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.7 5 .4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"/></svg>
             </span>
@@ -119,15 +204,7 @@
             <span class="external-arrow" aria-hidden="true">↗</span>
           </a>
 
-          <a class="card card--link reveal" href="https://github.com/Qaevix/TryHackMe" target="_blank" rel="noopener noreferrer">
-            <span class="platform-icon platform-icon--notes" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M5 4.5h10.5A3.5 3.5 0 0 1 19 8v11.5H8.5A3.5 3.5 0 0 1 5 16V4.5Zm0 11.5a3.5 3.5 0 0 1 3.5-3.5H19"/></svg>
-            </span>
-            <span class="card__title"><strong>Write-ups</strong><small>TryHackMe notes</small></span>
-            <span class="external-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <button class="card card--link reveal" id="copy-discord" type="button" data-copy="atak1n">
+          <button class="card card--link social-card reveal" id="copy-discord" type="button" data-copy="atak1n">
             <span class="platform-icon platform-icon--discord" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M8.4 7.2a12 12 0 0 1 7.2 0M9.2 15.2c1.8 1 3.8 1 5.6 0M8.8 12h.1m6.2 0h.1M6.3 5.8C4.6 8.4 4 11.2 4 16c1.8 1.3 3.4 1.8 5 2l1.1-1.5M17.7 5.8C19.4 8.4 20 11.2 20 16c-1.8 1.3-3.4 1.8-5 2l-1.1-1.5"/></svg>
             </span>
@@ -136,7 +213,33 @@
               <svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
             </span>
           </button>
+
+          <a class="card card--link social-card reveal" href="https://github.com/Qaevix/Hack-The-Box" target="_blank" rel="noopener noreferrer">
+            <span class="platform-icon platform-icon--htb" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m12 3 7.8 4.5v9L12 21l-7.8-4.5v-9L12 3Z"/><path d="m8 9.2 4 2.3 4-2.3M12 11.5V16"/></svg>
+            </span>
+            <span class="card__title"><strong>HTB Write-ups</strong><small>GitHub collection</small></span>
+            <span class="external-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="card card--link social-card reveal" href="https://www.linkedin.com/in/qaevix-a-404108315/" target="_blank" rel="noopener noreferrer">
+            <span class="platform-icon platform-icon--linkedin" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6.5 9.3V18M6.5 6.2v.1M10.6 18v-8.7M10.6 13c.7-2.8 6.9-3.4 6.9 1.2V18"/></svg>
+            </span>
+            <span class="card__title"><strong>LinkedIn</strong><small>Professional profile</small></span>
+            <span class="external-arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
+
+        <a class="card medium-card reveal" href="https://medium.com/@qaevix" target="_blank" rel="noopener noreferrer">
+          <span class="medium-card__mark" aria-hidden="true">M</span>
+          <span class="medium-card__copy">
+            <small>LONG-FORM NOTES</small>
+            <strong>Medium · @qaevix</strong>
+            <span>Cybersecurity articles, learning logs, research notes, and deeper technical breakdowns.</span>
+          </span>
+          <span class="medium-card__cta">Read articles <b>↗</b></span>
+        </a>
       </div>
     </section>
 
@@ -167,7 +270,7 @@
   </main>
 
   <footer class="footer">
-    <span>© <span id="current-year">2026</span> l1nux</span>
+    <span>© <span id="current-year">2026</span> Qaevix</span>
     <span class="footer__status"><i></i> All systems operational</span>
     <button id="footer-terminal" type="button">Qaevix@portfolio:~$</button>
   </footer>
@@ -190,5 +293,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js" defer></script>
+  <script src="qaevix.js" defer></script>
 </body>
 </html>
