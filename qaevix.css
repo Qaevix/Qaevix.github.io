@@ -27,49 +27,42 @@
   letter-spacing: 0 !important;
 }
 
-.qaevix-wordmark__video,
+.qaevix-wordmark__fill,
 .qaevix-wordmark__outline {
   position: absolute;
   inset: 0;
 }
 
-.qaevix-wordmark__video {
+.qaevix-wordmark__fill {
   z-index: 1;
-  overflow: hidden;
-  pointer-events: none;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 240'%3E%3Ctext x='500' y='205' text-anchor='middle' font-family='Impact,Arial Black,sans-serif' font-size='218' font-weight='900' letter-spacing='-8'%3EQaevix%3C/text%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 240'%3E%3Ctext x='500' y='205' text-anchor='middle' font-family='Impact,Arial Black,sans-serif' font-size='218' font-weight='900' letter-spacing='-8'%3EQaevix%3C/text%3E%3C/svg%3E");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  filter: drop-shadow(0 0 18px rgba(255, 26, 26, 0.34));
-}
 
-.qaevix-wordmark__video::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background: linear-gradient(90deg, rgba(255, 18, 18, 0.05), rgba(255, 232, 31, 0.08), rgba(255, 18, 18, 0.12));
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.qaevix-wordmark__video iframe {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: 920px;
-  height: 518px;
-  max-width: none;
-  border: 0;
-  transform: translate(-50%, -48%) scale(1.06);
-  filter: saturate(1.3) contrast(1.2) brightness(1.06);
-  pointer-events: none;
+  color: transparent;
+
+  font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+  font-size: clamp(5rem, 11vw, 7.4rem);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+
+  background-image: url("assets/qaevix-wordmark.gif");
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transform: scaleY(0.9);
+
+  filter:
+    brightness(1.1)
+    contrast(1.15)
+    drop-shadow(0 0 18px rgba(255, 26, 26, 0.35));
 }
 
 .qaevix-wordmark__outline {
@@ -605,11 +598,6 @@
     font-size: clamp(4.7rem, 24vw, 6.7rem);
   }
 
-  .qaevix-wordmark__video iframe {
-    width: 720px;
-    height: 405px;
-  }
-
   .social-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -667,14 +655,3 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .qaevix-wordmark__video iframe {
-    display: none;
-  }
-
-  .qaevix-wordmark__video {
-    background:
-      radial-gradient(circle at 30% 50%, #ffe81f, transparent 18%),
-      linear-gradient(100deg, #2a0808, #ff2020 45%, #ffe7b0 55%, #8a0000);
-  }
-}
