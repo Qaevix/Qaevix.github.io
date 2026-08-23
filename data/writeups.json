@@ -1,0 +1,19 @@
+{
+  "tryhackme": [
+    {
+      "title": "TryHackMe Write-ups",
+      "description": "Current GitHub collection ↗",
+      "url": "https://github.com/Qaevix/TryHackMe",
+      "external": true
+    }
+  ],
+  "hackthebox": [
+    {
+      "title": "Hack The Box Write-ups",
+      "description": "Current GitHub collection ↗",
+      "url": "https://github.com/Qaevix/Hack-The-Box",
+      "external": true
+    }
+  ],
+  "computer-science": []
+}
