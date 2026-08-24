@@ -34,35 +34,34 @@
 }
 
 .qaevix-wordmark__fill {
+  position: absolute;
+  inset: 0;
   z-index: 1;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  overflow: hidden;
+  font-size: 0;
   color: transparent;
-
-  font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
-  font-size: clamp(5rem, 11vw, 7.4rem);
-  font-weight: 900;
-  line-height: 0.82;
-  letter-spacing: -0.055em;
+  pointer-events: none;
 
   background-image: url("assets/qaevix-wordmark.gif");
-  background-size: 158% auto;
-  background-position: 64% 88%;
   background-repeat: no-repeat;
+  background-size: 125% auto;
+  background-position: 62% 44%;
 
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 240'%3E%3Ctext x='500' y='205' text-anchor='middle' font-family='Impact,Arial Black,sans-serif' font-size='218' font-weight='900' letter-spacing='-8'%3EQaevix%3C/text%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 240'%3E%3Ctext x='500' y='205' text-anchor='middle' font-family='Impact,Arial Black,sans-serif' font-size='218' font-weight='900' letter-spacing='-8'%3EQaevix%3C/text%3E%3C/svg%3E");
 
-  transform: scaleY(0.9);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
 
   filter:
-    brightness(1.02)
-    contrast(1.35)
-    drop-shadow(0 0 14px rgba(255, 26, 26, 0.28));
+    brightness(1.28)
+    contrast(1.42)
+    saturate(1.18);
 }
 
 .qaevix-wordmark__outline {
@@ -78,11 +77,11 @@
   line-height: 0.82;
   letter-spacing: -0.055em;
   transform: scaleY(0.9);
-  -webkit-text-stroke: 1.35px rgba(255, 244, 226, 0.88);
+  -webkit-text-stroke: 1.05px rgba(255, 244, 226, 0.72);
   text-shadow:
-    0 0 8px rgba(255, 239, 200, 0.2),
-    0 0 24px rgba(255, 28, 28, 0.34),
-    0 0 54px rgba(118, 0, 0, 0.28);
+    0 0 6px rgba(255, 239, 200, 0.14),
+    0 0 16px rgba(255, 28, 28, 0.22),
+    0 0 34px rgba(118, 0, 0, 0.18);
   pointer-events: none;
 }
 
