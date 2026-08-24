@@ -49,8 +49,8 @@
   letter-spacing: -0.055em;
 
   background-image: url("assets/qaevix-wordmark.gif");
-  background-size: 165% auto;
-  background-position: 64% 18%;
+  background-size: 158% auto;
+  background-position: 64% 88%;
   background-repeat: no-repeat;
 
   -webkit-background-clip: text;
@@ -60,9 +60,9 @@
   transform: scaleY(0.9);
 
   filter:
-    brightness(1.1)
-    contrast(1.15)
-    drop-shadow(0 0 18px rgba(255, 26, 26, 0.35));
+    brightness(1.02)
+    contrast(1.35)
+    drop-shadow(0 0 14px rgba(255, 26, 26, 0.28));
 }
 
 .qaevix-wordmark__outline {
