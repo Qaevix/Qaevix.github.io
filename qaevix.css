@@ -44,9 +44,9 @@
   pointer-events: none;
 
   background-image: url("assets/qaevix-wordmark.gif");
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: 125% auto;
-  background-position: 62% 44%;
 
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 240'%3E%3Ctext x='500' y='205' text-anchor='middle' font-family='Impact,Arial Black,sans-serif' font-size='218' font-weight='900' letter-spacing='-8'%3EQaevix%3C/text%3E%3C/svg%3E");
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 240'%3E%3Ctext x='500' y='205' text-anchor='middle' font-family='Impact,Arial Black,sans-serif' font-size='218' font-weight='900' letter-spacing='-8'%3EQaevix%3C/text%3E%3C/svg%3E");
@@ -57,11 +57,6 @@
   mask-position: center;
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
-
-  filter:
-    brightness(1.28)
-    contrast(1.42)
-    saturate(1.18);
 }
 
 .qaevix-wordmark__outline {
