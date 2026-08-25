@@ -72,11 +72,9 @@
   line-height: 0.82;
   letter-spacing: -0.055em;
   transform: scaleY(0.9);
-  -webkit-text-stroke: 1.05px rgba(255, 244, 226, 0.72);
+  -webkit-text-stroke: 0.95px rgba(0, 0, 0, 0.95);
   text-shadow:
-    0 0 6px rgba(255, 239, 200, 0.14),
-    0 0 16px rgba(255, 28, 28, 0.22),
-    0 0 34px rgba(118, 0, 0, 0.18);
+    0 0 6px rgba(255, 0, 0, 0.12);
   pointer-events: none;
 }
 
