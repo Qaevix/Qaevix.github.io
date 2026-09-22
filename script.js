@@ -7,12 +7,12 @@
   const estimatedTryHackMeUsers = 8_000_000;
 
   const profile = {
-    username: "l1nux",
-    rank: 87,
-    badges: 97,
-    streak: 61,
-    points: 160258,
-    completedRooms: 1198,
+    username: "Qaevix",
+    rank: 93,
+    badges: 100,
+    streak: 114,
+    points: 166156,
+    completedRooms: 1234,
     level: 21,
     levelHex: "0x15",
     levelTitle: "GRANDMASTER",
