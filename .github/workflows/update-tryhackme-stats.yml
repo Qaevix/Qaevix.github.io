@@ -6,27 +6,27 @@ on:
       rank:
         description: "Worldwide rank"
         required: true
-        default: "87"
+        default: "93"
         type: string
       badges:
         description: "Badges earned"
         required: true
-        default: "97"
+        default: "100"
         type: string
       streak:
         description: "Current streak"
         required: true
-        default: "62"
+        default: "114"
         type: string
       points:
         description: "Total points"
         required: true
-        default: "160346"
+        default: "166156"
         type: string
       completed_rooms:
         description: "Completed rooms"
         required: true
-        default: "1198"
+        default: "1234"
         type: string
       level:
         description: "TryHackMe level number"
