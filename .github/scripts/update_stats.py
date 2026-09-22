@@ -83,27 +83,27 @@ def main() -> int:
         "rank": first_number(
             data,
             ("rank",),
-            existing.get("rank", 97),
+            existing.get("rank", 93),
         ),
         "badges": first_number(
             data,
             ("badgesNumber", "badges"),
-            existing.get("badges", 95),
+            existing.get("badges", 100),
         ),
         "streak": first_number(
             data,
             ("streak", "currentStreak", "streakDays", "dailyStreak"),
-            existing.get("streak", 52),
+            existing.get("streak", 114),
         ),
         "points": first_number(
             data,
             ("totalPoints", "points"),
-            existing.get("points", 157258),
+            existing.get("points", 166156),
         ),
         "completedRooms": first_number(
             data,
             ("completedRoomsNumber", "completedRooms", "rooms"),
-            existing.get("completedRooms", 1151),
+            existing.get("completedRooms", 1234),
         ),
         "level": level,
         "levelHex": f"0x{level:X}",
